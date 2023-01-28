@@ -350,10 +350,4 @@ start_time=$(date +%s)
 get_system_info
 check_virt
 clear
-print_intro
-next
 print_system_info
-ipv4_info
-next
-print_end_time
-next
