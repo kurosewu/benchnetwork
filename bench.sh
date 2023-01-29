@@ -46,6 +46,7 @@ hos=$(hostname)
 MYIP=$(curl -sS ipv4.icanhazip.com)
 domain=$(cat /usr/local/etc/xray/domain)
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+ZON=$(curl -s ipinfo.io/timezone )
 
 clear
 echo -e " \e[031;1mSystem Info\e[0m ($hos)"
@@ -53,7 +54,7 @@ echo -e " -------------------------------"
 echo -e " \e[031;1mISP\e[0m: $ISP"
 echo -e " \e[031;1mAdress\e[0m: $domain"
 echo -e " \e[031;1mIP\e[0m: $MYIP"
-echo -e " \e[031;1mTimezone\e[0m: Asia/Jakarta"
+echo -e " \e[031;1mTimezone\e[0m: $ZON"
 echo -e " \e[031;1mOS\e[0m: $opsy"
 echo -e " \e[031;1mArch\e[0m: $arch ($lbit Bit)"
 echo -e " \e[031;1mKernel\e[0m: $kern"
